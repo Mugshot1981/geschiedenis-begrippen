@@ -284,8 +284,172 @@ const chapters = {
       term: "Volkenbond",
       description: "Een internationale organisatie die een nieuwe oorlog moest voorkomen."
     }
-  ]
-};
+
+      ],
+
+  "Hoofdstuk 3 – Het Interbellum 1918 - 1939": [
+    {
+      term: "interbellum",
+      description: "De periode tussen de twee wereldoorlogen (1918-1939)."
+    },
+    {
+      term: "Republiek van Weimar",
+      description: "Naam voor Duitsland tussen 1918 en 1933, toen Duitsland een parlementaire democratie was."
+    },
+    {
+      term: "parlementaire democratie",
+      description: "Een bestuursvorm waarin de macht ligt bij een parlement dat gekozen wordt door de burgers."
+    },
+    {
+      term: "dolkstootlegende",
+      description: "Het idee dat het Duitse leger de Eerste Wereldoorlog had kunnen winnen als de regering in 1918 geen wapenstilstand had gesloten."
+    },
+    {
+      term: "Verdrag van Versailles",
+      description: "Het vredesverdrag tussen Duitsland en de geallieerden na afloop van de Eerste Wereldoorlog."
+    },
+    {
+      term: "inflatie",
+      description: "Het geld wordt minder waard."
+    },
+    {
+      term: "Dawesplan",
+      description: "Plan uit 1924 dat inhield dat de Verenigde Staten goedkope leningen aan Duitsland gaven om zijn economie weer op te bouwen."
+    },
+    {
+      term: "economische crisis",
+      description: "Een periode waarin het slecht gaat met de economie."
+    },
+    {
+      term: "beurskrach",
+      description: "Een grote, plotselinge daling van de koersen van aandelen."
+    },
+    {
+      term: "Nationaalsocialistische Duitse Arbeiderspartij (NSDAP)",
+      description: "De politieke partij van Adolf Hitler."
+    },
+    {
+      term: "nationalisme",
+      description: "Trots zijn op je eigen land, volk en cultuur."
+    },
+    {
+      term: "Führerprincipe",
+      description: "Er is één leider die alle besluiten neemt en aan wie iedereen gehoorzaamt."
+    },
+    {
+      term: "persoonsverheerlijking",
+      description: "Een mens als een soort god vereren."
+    },
+    {
+      term: "militarisme",
+      description: "Het idee dat oorlog iets moois is en dat een land zo kan laten zien hoe sterk het is."
+    },
+    {
+      term: "antisemitisme",
+      description: "Haat tegen Joden."
+    },
+    {
+      term: "dictatuur",
+      description: "Een manier van regeren waarbij één persoon of een kleine groep alle macht heeft."
+    },
+    {
+      term: "totalitaire staat",
+      description: "Een land waarin het leven van de inwoners volledig wordt beheerst door de staat."
+    },
+    {
+      term: "gelijkschakeling",
+      description: "Het onder directe controle brengen van alle organisaties en alle media in Duitsland door de nazi’s."
+    },
+    {
+      term: "indoctrinatie",
+      description: "Het inprenten van een opvatting door deze continu te herhalen en geen andere meningen toe te staan."
+    },
+    {
+      term: "concentratiekamp",
+      description: "Grote kampen waarin bepaalde groepen mensen zonder proces werden opgesloten."
+    },
+    {
+      term: "Gestapo",
+      description: "De geheime politie in nazi-Duitsland."
+    },
+    {
+      term: "SA",
+      description: "De knokploeg van de NSDAP: een groep gewapende mannen in uniform die de partij beschermde en tegenstanders bang maakte."
+    },
+    {
+      term: "SS",
+      description: "Een militaire organisatie binnen de NSDAP die vooral tijdens de Tweede Wereldoorlog veel misdaden pleegde."
+    },
+    {
+      term: "Heim ins Reich",
+      description: "Het idee dat alle Duitssprekenden in één groot Duits rijk zouden moeten wonen."
+    },
+    {
+      term: "Anschluss",
+      description: "De aansluiting in 1938 van Oostenrijk bij Duitsland."
+    },
+    {
+      term: "Conferentie van München",
+      description: "Een bijeenkomst in 1938 waarbij Groot-Brittannië en Frankrijk toestonden dat Hitler Sudetenland innam, in ruil voor Hitlers belofte om verder geen gebieden in te nemen."
+    },
+    {
+      term: "appeasementpolitiek",
+      description: "Britse en Franse politiek van niet ingrijpen maar toegeven aan Hitler om de vrede te bewaren."
+    },
+    {
+      term: "Lebensraum",
+      description: "Leefruimte voor het Duitse volk, die Hitler wilde krijgen door het Duitse grondgebied uit te breiden naar het oosten."
+    },
+    {
+      term: "fascisme",
+      description: "Een extreemrechtse politieke beweging die ontstond in Italië. Fascisten zijn extreem nationalistisch, militaristisch en tegen democratie."
+    },
+    {
+      term: "aanpassingspolitiek",
+      description: "Politiek waarbij de uitgaven van de overheid werden aangepast aan de teruglopende inkomsten: bezuinigen."
+    },
+    {
+      term: "werkverschaffingsproject",
+      description: "Groot project dat de regering organiseerde, waar werklozen verplicht zwaar werk deden in ruil voor een vergoeding."
+    },
+    {
+      term: "Nationaalsocialistische Beweging (NSB)",
+      description: "Een extreemrechtse politieke partij die in 1931 door Anton Mussert in Nederland werd opgericht."
+    },
+    {
+      term: "communisme",
+      description: "Een politieke stroming. Communisten streven naar een samenleving waarin iedereen gelijk is."
+    },
+    {
+      term: "planeconomie",
+      description: "De economie wordt volledig geleid door de overheid."
+    },
+    {
+      term: "vijfjarenplannen",
+      description: "Plannen waarin staat wat en hoeveel er in vijf jaar geproduceerd moet worden."
+    },
+    {
+      term: "collectivisatie",
+      description: "Zelfstandige boerderijen werden samengevoegd tot grote gezamenlijke boerderijen die bezit waren van de staat."
+    },
+    {
+      term: "Grote Terreur",
+      description: "Periode van 1936 tot 1938, waarin de zuiveringen van Stalin op een hoogtepunt waren."
+    },
+    {
+      term: "showproces",
+      description: "Een rechtszaak waarbij al van tevoren vaststaat dat een verdachte schuldig wordt bevonden."
+    },
+    {
+      term: "stalinisme",
+      description: "Stalins manier van besturen."
+    },
+    {
+      term: "niet-aanvalsverdrag",
+      description: "Verdrag uit 1939 waarin Duitsland en de Sovjet-Unie beloofden elkaar niet aan te vallen en elkaars tegenstanders niet te hulp te komen. In een geheim gedeelte van dit verdrag stond dat Polen tussen beide landen werd verdeeld."
+    }
+  ],
+
 
   
   "Hoofdstuk 4 – De Tweede Wereldoorlog 1939-1945 en dekolonisatie": [
