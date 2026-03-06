@@ -218,9 +218,11 @@ function handleAnswer(clickedButton, selectedOption) {
   }
 
   updateScoreDisplay();
-  nextButton.classList.remove("hidden");
-}
 
+  setTimeout(() => {
+    buildQuestion();
+  }, 700);
+}
 
 // ===== QUIZ STARTEN =====
 
