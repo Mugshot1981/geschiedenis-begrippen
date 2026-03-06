@@ -205,10 +205,12 @@ function handleAnswer(clickedButton, selectedOption) {
 
   if (selectedOption.isCorrect) {
     scoreCorrect++;
-    feedback.textContent = "Goed.";
+    feedback.textContent = "GOED!";
+feedback.className = "feedback show good";
   } else {
     clickedButton.classList.add("wrong");
-    feedback.textContent = "Fout.";
+  feedback.textContent = "FOUT!";
+feedback.className = "feedback show bad";
 
     const wrongItem = currentChapterItems.find((item) => item.id === currentQuestion.id);
 
