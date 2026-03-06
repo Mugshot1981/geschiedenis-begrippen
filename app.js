@@ -8,6 +8,11 @@ const answersContainer = document.getElementById("answers");
 const feedback = document.getElementById("feedback");
 const nextButton = document.getElementById("nextButton");
 
+const endScreen = document.getElementById("endScreen");
+const finalScoreText = document.getElementById("finalScoreText");
+const finalStars = document.getElementById("finalStars");
+const restartButton = document.getElementById("restartButton");
+
 let currentChapterItems = [];
 let remainingQuestions = [];
 let currentQuestion = null;
@@ -38,31 +43,40 @@ function getRandomItem(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-function updateScoreDisplay() {
-
-  scoreCorrectEl.textContent = scoreCorrect;
-  scoreTotalEl.textContent = scoreTotal;
-
-  if(scoreTotal === 0){
-    scoreStarsEl.textContent = "☆☆☆☆☆";
-    return;
+function getStarsText() {
+  if (scoreTotal === 0) {
+    return "☆☆☆☆☆";
   }
 
   const percent = scoreCorrect / scoreTotal;
 
   let stars = 0;
 
-  if(percent >= 0.9) stars = 5;
-  else if(percent >= 0.75) stars = 4;
-  else if(percent >= 0.6) stars = 3;
-  else if(percent >= 0.4) stars = 2;
-  else if(percent >= 0.2) stars = 1;
+  if (percent >= 0.9) stars = 5;
+  else if (percent >= 0.75) stars = 4;
+  else if (percent >= 0.6) stars = 3;
+  else if (percent >= 0.4) stars = 2;
+  else if (percent >= 0.2) stars = 1;
   else stars = 0;
 
-  scoreStarsEl.textContent =
-    "★★★★★".slice(0, stars) +
-    "☆☆☆☆☆".slice(0, 5 - stars);
+  return "★★★★★".slice(0, stars) + "☆☆☆☆☆".slice(0, 5 - stars);
+}
 
+function updateScoreDisplay() {
+  scoreCorrectEl.textContent = scoreCorrect;
+  scoreTotalEl.textContent = scoreTotal;
+  scoreStarsEl.textContent = getStarsText();
+}
+
+function showEndScreen() {
+  answersContainer.innerHTML = "";
+  feedback.textContent = "";
+  nextButton.classList.add("hidden");
+
+  finalScoreText.textContent = `${scoreCorrect} / ${scoreTotal}`;
+  finalStars.textContent = getStarsText();
+
+  endScreen.classList.remove("hidden");
 }
 
 // ===== HOOFDSTUKKEN LADEN =====
@@ -87,9 +101,12 @@ function buildQuestion() {
   nextButton.classList.add("hidden");
   answered = false;
 
- if (remainingQuestions.length === 0) {
-  remainingQuestions = shuffleArray([...currentChapterItems]);
+if (remainingQuestions.length === 0) {
+  showEndScreen();
+  return;
 }
+
+const correctItem = remainingQuestions.pop();
 
 const correctItem = remainingQuestions.pop();
   const wrongDescriptions = currentChapterItems
@@ -195,6 +212,7 @@ scoreCorrect = 0;
 scoreTotal = 0;
 updateScoreDisplay();
 
+endScreen.classList.add("hidden");
 quizArea.classList.remove("hidden");
 buildQuestion();
 });
@@ -208,5 +226,13 @@ nextButton.addEventListener("click", () => {
 
 
 // ===== INIT =====
+restartButton.addEventListener("click", () => {
+  remainingQuestions = shuffleArray([...currentChapterItems]);
+  scoreCorrect = 0;
+  scoreTotal = 0;
+  updateScoreDisplay();
 
+  endScreen.classList.add("hidden");
+  buildQuestion();
+});
 loadChapters();
