@@ -13,6 +13,17 @@ const finalScoreText = document.getElementById("finalScoreText");
 const finalStars = document.getElementById("finalStars");
 const restartButton = document.getElementById("restartButton");
 
+const scoreCorrectEl = document.getElementById("scoreCorrect");
+const scoreTotalEl = document.getElementById("scoreTotal");
+const scoreStarsEl = document.getElementById("scoreStars");
+
+const questionNumberEl = document.getElementById("questionNumber");
+const questionTotalEl = document.getElementById("questionTotal");
+const progressFill = document.getElementById("progressFill");
+
+
+// ===== STATUS =====
+
 let currentChapterItems = [];
 let remainingQuestions = [];
 let currentQuestion = null;
@@ -20,12 +31,6 @@ let answered = false;
 
 let scoreCorrect = 0;
 let scoreTotal = 0;
-
-const scoreCorrectEl = document.getElementById("scoreCorrect");
-const scoreTotalEl = document.getElementById("scoreTotal");
-const scoreStarsEl = document.getElementById("scoreStars");
-const questionCurrentEl = document.getElementById("questionCurrent");
-const questionTotalEl = document.getElementById("questionTotal");
 
 
 // ===== HULPFUNCTIES =====
@@ -41,17 +46,12 @@ function shuffleArray(array) {
   return copy;
 }
 
-function getRandomItem(array) {
-  return array[Math.floor(Math.random() * array.length)];
-}
-
 function getStarsText() {
   if (scoreTotal === 0) {
     return "☆☆☆☆☆";
   }
 
   const percent = scoreCorrect / scoreTotal;
-
   let stars = 0;
 
   if (percent >= 0.9) stars = 5;
@@ -69,8 +69,12 @@ function updateScoreDisplay() {
   scoreTotalEl.textContent = scoreTotal;
   scoreStarsEl.textContent = getStarsText();
 
-  questionCurrentEl.textContent = scoreTotal;
-  questionTotalEl.textContent = currentChapterItems.length;
+  const totalQuestions = currentChapterItems.length || 0;
+  questionNumberEl.textContent = scoreTotal;
+  questionTotalEl.textContent = totalQuestions;
+
+  const percent = totalQuestions > 0 ? (scoreTotal / totalQuestions) * 100 : 0;
+  progressFill.style.width = `${percent}%`;
 }
 
 function showEndScreen() {
@@ -83,6 +87,7 @@ function showEndScreen() {
 
   endScreen.classList.remove("hidden");
 }
+
 
 // ===== HOOFDSTUKKEN LADEN =====
 
@@ -106,14 +111,13 @@ function buildQuestion() {
   nextButton.classList.add("hidden");
   answered = false;
 
-if (remainingQuestions.length === 0) {
-  showEndScreen();
-  return;
-}
+  if (remainingQuestions.length === 0) {
+    showEndScreen();
+    return;
+  }
 
+  const correctItem = remainingQuestions.pop();
 
-
-const correctItem = remainingQuestions.pop();
   const wrongDescriptions = currentChapterItems
     .filter((item) => item.term !== correctItem.term)
     .map((item) => item.description);
@@ -166,6 +170,7 @@ function handleAnswer(clickedButton, selectedOption) {
   }
 
   answered = true;
+  scoreTotal++;
 
   const allButtons = document.querySelectorAll(".answer");
 
@@ -179,18 +184,15 @@ function handleAnswer(clickedButton, selectedOption) {
     }
   });
 
- scoreTotal++;
+  if (selectedOption.isCorrect) {
+    scoreCorrect++;
+    feedback.textContent = "Goed.";
+  } else {
+    clickedButton.classList.add("wrong");
+    feedback.textContent = "Fout.";
+  }
 
-if (selectedOption.isCorrect) {
-  scoreCorrect++;
-  feedback.textContent = "Goed.";
-} else {
-  clickedButton.classList.add("wrong");
-  feedback.textContent = "Fout.";
-}
-
-updateScoreDisplay();
-
+  updateScoreDisplay();
   nextButton.classList.remove("hidden");
 }
 
@@ -205,21 +207,21 @@ startButton.addEventListener("click", () => {
     return;
   }
 
-currentChapterItems = chapters[selectedChapter];
+  currentChapterItems = chapters[selectedChapter];
 
-if (!currentChapterItems || currentChapterItems.length < 4) {
-  alert("Dit hoofdstuk heeft minimaal 4 begrippen nodig.");
-  return;
-}
+  if (!currentChapterItems || currentChapterItems.length < 4) {
+    alert("Dit hoofdstuk heeft minimaal 4 begrippen nodig.");
+    return;
+  }
 
-remainingQuestions = shuffleArray([...currentChapterItems]);
-scoreCorrect = 0;
-scoreTotal = 0;
-updateScoreDisplay();
+  remainingQuestions = shuffleArray([...currentChapterItems]);
+  scoreCorrect = 0;
+  scoreTotal = 0;
+  updateScoreDisplay();
 
-endScreen.classList.add("hidden");
-quizArea.classList.remove("hidden");
-buildQuestion();
+  endScreen.classList.add("hidden");
+  quizArea.classList.remove("hidden");
+  buildQuestion();
 });
 
 
@@ -230,14 +232,22 @@ nextButton.addEventListener("click", () => {
 });
 
 
-// ===== INIT =====
-restartButton.addEventListener("click", () => {
-  remainingQuestions = shuffleArray([...currentChapterItems]);
-  scoreCorrect = 0;
-  scoreTotal = 0;
-  updateScoreDisplay();
+// ===== OPNIEUW OEFENEN =====
 
-  endScreen.classList.add("hidden");
-  buildQuestion();
-});
+if (restartButton) {
+  restartButton.addEventListener("click", () => {
+    remainingQuestions = shuffleArray([...currentChapterItems]);
+    scoreCorrect = 0;
+    scoreTotal = 0;
+    updateScoreDisplay();
+
+    endScreen.classList.add("hidden");
+    buildQuestion();
+  });
+}
+
+
+// ===== INIT =====
+
 loadChapters();
+updateScoreDisplay();
