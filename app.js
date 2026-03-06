@@ -84,7 +84,8 @@ function updateScoreDisplay() {
 
 function showEndScreen() {
   answersContainer.innerHTML = "";
-  feedback.textContent = "";
+feedback.textContent = "";
+feedback.className = "feedback";
   nextButton.classList.add("hidden");
 
   finalScoreText.textContent = `${scoreCorrect} / ${scoreTotal}`;
