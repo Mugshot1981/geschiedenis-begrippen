@@ -161,3 +161,10 @@ letter-spacing:3px;
 .feedback.bad {
   background: #e74c3c;
 }
+.correct-answer{
+  display:block;
+  font-size:28px;
+  margin-top:12px;
+  font-weight:600;
+  line-height:1.3;
+}
