@@ -9,10 +9,12 @@ const feedback = document.getElementById("feedback");
 const nextButton = document.getElementById("nextButton");
 
 const endScreen = document.getElementById("endScreen");
+const wrongCountText = document.getElementById("wrongCountText");
 const finalScoreText = document.getElementById("finalScoreText");
 const finalStars = document.getElementById("finalStars");
 const restartButton = document.getElementById("restartButton");
 const retryWrongButton = document.getElementById("retryWrongButton");
+
 
 const scoreCorrectEl = document.getElementById("scoreCorrect");
 const scoreTotalEl = document.getElementById("scoreTotal");
