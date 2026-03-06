@@ -86,16 +86,19 @@ function updateScoreDisplay() {
 
 function showEndScreen() {
   answersContainer.innerHTML = "";
-feedback.textContent = "";
-feedback.className = "feedback";
+  feedback.textContent = "";
+  feedback.className = "feedback";
+  feedback.style.display = "none";
   nextButton.classList.add("hidden");
 
   finalScoreText.textContent = `${scoreCorrect} / ${scoreTotal}`;
   finalStars.textContent = getStarsText();
 
   if (wrongItems.length > 0) {
+    wrongCountText.textContent = `Je had ${wrongItems.length} fout${wrongItems.length === 1 ? "" : "en"}.`;
     retryWrongButton.classList.remove("hidden");
   } else {
+    wrongCountText.textContent = "Alles goed gemaakt.";
     retryWrongButton.classList.add("hidden");
   }
 
