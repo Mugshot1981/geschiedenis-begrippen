@@ -216,9 +216,9 @@ function handleAnswer(clickedButton, selectedOption) {
       }
     });
 
-    feedback.textContent = "FOUT!";
-    feedback.className = "feedback show bad";
-    feedback.style.display = "block";
+   feedback.innerHTML = "FOUT<br><span class='correct-answer'>" + currentQuestion.answer + "</span>";
+feedback.className = "feedback show bad";
+feedback.style.display = "block";
 
     const wrongItem = currentChapterItems.find((item) => item.id === currentQuestion.id);
 
