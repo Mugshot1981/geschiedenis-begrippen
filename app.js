@@ -90,6 +90,12 @@ function showEndScreen() {
   finalScoreText.textContent = `${scoreCorrect} / ${scoreTotal}`;
   finalStars.textContent = getStarsText();
 
+  if (wrongItems.length > 0) {
+    retryWrongButton.classList.remove("hidden");
+  } else {
+    retryWrongButton.classList.add("hidden");
+  }
+
   endScreen.classList.remove("hidden");
 }
 
@@ -253,7 +259,22 @@ nextButton.addEventListener("click", () => {
 });
 
 
-// ===== OPNIEUW OEFENEN =====
+
+// ===== FOUTEN OPNIEUW OEFENEN =====
+
+if (retryWrongButton) {
+  retryWrongButton.addEventListener("click", () => {
+    currentChapterItems = [...wrongItems];
+    remainingQuestions = shuffleArray([...wrongItems]);
+    scoreCorrect = 0;
+    scoreTotal = 0;
+    wrongItems = [];
+    updateScoreDisplay();
+
+    endScreen.classList.add("hidden");
+    buildQuestion();
+  });
+}
 
 if (restartButton) {
   restartButton.addEventListener("click", () => {
