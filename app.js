@@ -196,26 +196,30 @@ function handleAnswer(clickedButton, selectedOption) {
 
   const allButtons = document.querySelectorAll(".answer");
 
-  allButtons.forEach((button, index) => {
-    const option = currentQuestion.options[index];
-
+  allButtons.forEach((button) => {
     button.disabled = true;
-
-    if (option.isCorrect) {
-      button.classList.add("correct");
-    }
   });
 
   if (selectedOption.isCorrect) {
+    clickedButton.classList.add("correct");
     scoreCorrect++;
     feedback.textContent = "GOED!";
-feedback.className = "feedback show good";
-feedback.style.display = "block";
+    feedback.className = "feedback show good";
+    feedback.style.display = "block";
   } else {
     clickedButton.classList.add("wrong");
- feedback.textContent = "FOUT!";
-feedback.className = "feedback show bad";
-feedback.style.display = "block";
+
+    allButtons.forEach((button, index) => {
+      const option = currentQuestion.options[index];
+      if (option.isCorrect) {
+        button.classList.add("correct");
+      }
+    });
+
+    feedback.textContent = "FOUT!";
+    feedback.className = "feedback show bad";
+    feedback.style.display = "block";
+
     const wrongItem = currentChapterItems.find((item) => item.id === currentQuestion.id);
 
     if (wrongItem && !wrongItems.some((item) => item.id === wrongItem.id)) {
