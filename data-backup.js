@@ -1131,5 +1131,382 @@ const items = [
   type: "begrip",
   prompt: "Kristallnacht",
   answer: "Een door de nazi’s georganiseerde actie in november 1938 waarbij Joodse mensen werden aangevallen en Joods bezit werd vernield."
+},
+{
+  id: "his-h5-001",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "invloedssfeer",
+  answer: "Een gebied dat onder grote invloed staat van een ander land."
+},
+{
+  id: "his-h5-002",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "communisme",
+  answer: "Een politieke stroming. Communisten streven naar een samenleving waarin iedereen gelijk is."
+},
+{
+  id: "his-h5-003",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Oostblok",
+  answer: "De Oost-Europese landen die tijdens de Koude Oorlog in de Russische invloedssfeer lagen."
+},
+{
+  id: "his-h5-004",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "satellietstaat",
+  answer: "Een land dat volledig afhankelijk is van een ander land."
+},
+{
+  id: "his-h5-005",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "kapitalisme",
+  answer: "Economie waarin ondernemers winst willen maken, er concurrentie bestaat en er privébezit is."
+},
+{
+  id: "his-h5-006",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Westblok",
+  answer: "De West-Europese landen die tijdens de Koude Oorlog in de Amerikaanse invloedssfeer lagen."
+},
+{
+  id: "his-h5-007",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "IJzeren Gordijn",
+  answer: "De zwaarbewapende grens tussen het Oostblok en het Westblok."
+},
+{
+  id: "his-h5-008",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Koude Oorlog",
+  answer: "De periode van vijandschap tussen het kapitalistische Westen en het communistische Oosten (1945-1989)."
+},
+{
+  id: "his-h5-009",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Blokkade van Berlijn",
+  answer: "Het afsluiten van alle toegangswegen tot West-Berlijn door Stalin (1948-1949)."
+},
+{
+  id: "his-h5-010",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "NAVO",
+  answer: "Een militair bondgenootschap van de Verenigde Staten, Canada en West-Europese landen."
+},
+{
+  id: "his-h5-011",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Warschaupact",
+  answer: "Een militair bondgenootschap tussen de Sovjet-Unie en de communistische landen in Oost-Europa."
+},
+{
+  id: "his-h5-012",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Marshallplan",
+  answer: "De economische steun van de Verenigde Staten aan landen in Europa na de Tweede Wereldoorlog."
+},
+{
+  id: "his-h5-013",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "containmentpolitiek",
+  answer: "De Amerikaanse politiek die moest voorkomen dat het communisme zich verder verspreidde."
+},
+{
+  id: "his-h5-014",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Berlijnse Muur",
+  answer: "Een muur rondom West-Berlijn, gebouwd door de regering van de DDR."
+},
+{
+  id: "his-h5-015",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Cubacrisis",
+  answer: "De grote spanning tussen de Sovjet-Unie en de Verenigde Staten toen de Sovjet-Unie raketten op Cuba wilde plaatsen."
+},
+{
+  id: "his-h5-016",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "perestrojka",
+  answer: "Een grote verandering in de communistische economie in de Sovjet-Unie."
+},
+{
+  id: "his-h5-017",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "glasnost",
+  answer: "Russisch voor 'openheid'. Een grote verandering op politiek gebied in de Sovjet-Unie waardoor er meer vrijheid kwam."
+},
+{
+  id: "his-h5-018",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Val van de Berlijnse Muur",
+  answer: "Het opengaan van de grens tussen West- en Oost-Berlijn."
+},
+{
+  id: "his-h5-019",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Duitse hereniging",
+  answer: "De vereniging van Oost-Duitsland en West-Duitsland tot één land."
+},
+{
+  id: "his-h5-020",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "wederopbouw",
+  answer: "Het herstel van de schade die de Tweede Wereldoorlog had veroorzaakt."
+},
+{
+  id: "his-h5-021",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "gastarbeiders",
+  answer: "Arbeidskrachten uit het buitenland die tijdelijk naar Nederland kwamen om te werken."
+},
+{
+  id: "his-h5-022",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "consumptiemaatschappij",
+  answer: "Een maatschappij waarin veel mensen luxeproducten kunnen kopen."
+},
+{
+  id: "his-h5-023",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "verzorgingsstaat",
+  answer: "De overheid zorgt ervoor dat burgers een inkomen hebben en zorg krijgen als ze dat nodig hebben."
+},
+{
+  id: "his-h5-024",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "amerikanisering",
+  answer: "De beïnvloeding van een cultuur door de Amerikaanse cultuur."
+},
+{
+  id: "his-h5-025",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "jongeren­cultuur",
+  answer: "De eigen stijl, houding en opvattingen van een groep jongeren."
+},
+{
+  id: "his-h5-026",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "individualisering",
+  answer: "Niet de groep maar het individu bepaalt steeds meer wat goed voor hem of haar is."
+},
+{
+  id: "his-h5-027",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "democratisering",
+  answer: "Als mensen meer inspraak krijgen."
+},
+{
+  id: "his-h5-028",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "secularisatie",
+  answer: "Steeds minder mensen zijn gelovig en gaan naar de kerk."
+},
+{
+  id: "his-h5-029",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "ontzuiling",
+  answer: "De invloed van de zuilen neemt af."
+},
+{
+  id: "his-h5-030",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "tweede feministische golf",
+  answer: "Feministen voerden actie in de jaren 1960 en 1970 om meer rechten voor vrouwen te krijgen."
+},
+{
+  id: "his-h5-031",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "poldermodel",
+  answer: "Samenwerking tussen de regering, werkgevers en werknemers om afspraken te maken."
+},
+{
+  id: "his-h5-032",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "populisme",
+  answer: "Een politieke beweging die opkomt voor de belangen van het 'volk' en zich afzet tegen de zittende politiek."
+},
+{
+  id: "his-h5-033",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Verenigde Naties (VN)",
+  answer: "Een internationale organisatie waarin bijna alle landen samenwerken om vrede en rechtvaardigheid te bevorderen."
+},
+{
+  id: "his-h5-034",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Veiligheidsraad",
+  answer: "Onderdeel van de VN dat als taak heeft de vrede te bewaken en militair mag ingrijpen."
+},
+{
+  id: "his-h5-035",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "vetorecht",
+  answer: "Het recht om 'nee' te zeggen tegen een besluit waardoor het niet wordt aangenomen."
+},
+{
+  id: "his-h5-036",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Europese Gemeenschap voor Kolen en Staal (EGKS)",
+  answer: "Samenwerking van zes Europese landen op het gebied van kolen en staal (vanaf 1951)."
+},
+{
+  id: "his-h5-037",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Europese Economische Gemeenschap (EEG)",
+  answer: "Samenwerking van Europese landen op economisch gebied (vanaf 1957)."
+},
+{
+  id: "his-h5-038",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Europese Unie (EU)",
+  answer: "Samenwerking van een groot aantal Europese landen op verschillende gebieden vanaf 1993."
+},
+{
+  id: "his-h5-039",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "euro",
+  answer: "De gemeenschappelijke Europese munt die vanaf 2002 gebruikt wordt in een groot aantal EU-landen."
+},
+{
+  id: "his-h5-040",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Europese Commissie",
+  answer: "Het dagelijks bestuur van de Europese Unie."
+},
+{
+  id: "his-h5-041",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Europees Parlement",
+  answer: "Volksvertegenwoordiging van de Europese Unie."
+},
+{
+  id: "his-h5-042",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "Raad van Ministers",
+  answer: "Vergadering waaraan uit elke EU-lidstaat één minister deelneemt."
+},
+{
+  id: "his-h5-043",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "globalisering",
+  answer: "Landen over de hele wereld raken op politiek, economisch en cultureel gebied steeds sterker met elkaar verbonden."
+},
+{
+  id: "his-h5-044",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "politieke islam",
+  answer: "Een politieke beweging die wil dat de samenleving bestuurd wordt volgens een strenge uitleg van de islam."
+},
+{
+  id: "his-h5-045",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "terrorisme",
+  answer: "Het gebruik van geweld om mensen angst aan te jagen en politieke doelen te bereiken."
+},
+{
+  id: "his-h5-046",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "multiculturele samenleving",
+  answer: "Samenleving die bestaat uit groepen mensen met verschillende culturen."
+},
+{
+  id: "his-h5-047",
+  subjectId: "geschiedenis",
+  chapterId: "his-h5",
+  type: "begrip",
+  prompt: "pluriforme samenleving",
+  answer: "Samenleving die bestaat uit groepen mensen met verschillende culturen."
 }
+];
 
