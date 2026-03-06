@@ -24,6 +24,8 @@ let scoreTotal = 0;
 const scoreCorrectEl = document.getElementById("scoreCorrect");
 const scoreTotalEl = document.getElementById("scoreTotal");
 const scoreStarsEl = document.getElementById("scoreStars");
+const questionCurrentEl = document.getElementById("questionCurrent");
+const questionTotalEl = document.getElementById("questionTotal");
 
 
 // ===== HULPFUNCTIES =====
@@ -66,6 +68,9 @@ function updateScoreDisplay() {
   scoreCorrectEl.textContent = scoreCorrect;
   scoreTotalEl.textContent = scoreTotal;
   scoreStarsEl.textContent = getStarsText();
+
+  questionCurrentEl.textContent = scoreTotal;
+  questionTotalEl.textContent = currentChapterItems.length;
 }
 
 function showEndScreen() {
