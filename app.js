@@ -33,6 +33,9 @@ let answered = false;
 let scoreCorrect = 0;
 let scoreTotal = 0;
 
+// Fouten-trainer (alleen huidige sessie, geen opslag)
+let wrongItems = [];
+
 
 // ===== HULPFUNCTIES =====
 
@@ -199,6 +202,12 @@ function handleAnswer(clickedButton, selectedOption) {
   } else {
     clickedButton.classList.add("wrong");
     feedback.textContent = "Fout.";
+
+    const wrongItem = currentChapterItems.find((item) => item.id === currentQuestion.id);
+
+    if (wrongItem && !wrongItems.some((item) => item.id === wrongItem.id)) {
+      wrongItems.push(wrongItem);
+    }
   }
 
   updateScoreDisplay();
@@ -224,9 +233,10 @@ startButton.addEventListener("click", () => {
     return;
   }
 
-  remainingQuestions = shuffleArray([...currentChapterItems]);
+   remainingQuestions = shuffleArray([...currentChapterItems]);
   scoreCorrect = 0;
   scoreTotal = 0;
+  wrongItems = [];
   updateScoreDisplay();
 
   endScreen.classList.add("hidden");
