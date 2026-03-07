@@ -304,6 +304,7 @@ startButton.addEventListener("click", () => {
 
   endScreen.classList.add("hidden");
   quizArea.classList.remove("hidden");
+  document.body.classList.add("quiz-active");
   buildQuestion();
 });
 
