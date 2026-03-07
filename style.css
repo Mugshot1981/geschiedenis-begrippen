@@ -160,7 +160,8 @@ letter-spacing:3px;
 }
 
 .feedback.bad {
-  background: #e74c3c;
+  background: rgba(231, 76, 60, 0.15);
+  border: 2px solid #e74c3c;
 }
 .correct-answer{
   display:block;
@@ -171,10 +172,12 @@ letter-spacing:3px;
 }
 
 .feedback-title {
-  font-size: 84px;
-  font-weight: 800;
-  line-height: 1;
-  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #e74c3c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .feedback-answer-box {
@@ -206,9 +209,7 @@ letter-spacing:3px;
   transform: scale(1.02);
 }
 .feedback-term{
-  font-size:48px;
+  font-size:40px;
   font-weight:800;
-  margin-bottom:22px;
-  text-transform:uppercase;
-  letter-spacing:1px;
+  margin-bottom:18px;
 }
