@@ -235,6 +235,13 @@ feedback.innerHTML = `
   <button id="feedbackContinueButton" class="feedback-continue-button">Verder</button>
 `;
     feedback.className = "feedback show bad";
+feedback.style.display = "block";
+
+// backdrop toevoegen
+const backdrop = document.createElement("div");
+backdrop.className = "modal-backdrop";
+backdrop.id = "feedbackBackdrop";
+document.body.appendChild(backdrop);
     feedback.style.display = "block";
 
     const wrongItem = currentChapterItems.find((item) => item.id === currentQuestion.id);
@@ -284,7 +291,11 @@ startButton.addEventListener("click", () => {
 feedback.addEventListener("click", (event) => {
   if (event.target && event.target.id === "feedbackContinueButton") {
   document.body.classList.remove("blur-background");
-  buildQuestion();
+  // backdrop verwijderen
+const backdrop = document.getElementById("feedbackBackdrop");
+if (backdrop) backdrop.remove();
+
+buildQuestion();
 }
 });
 
