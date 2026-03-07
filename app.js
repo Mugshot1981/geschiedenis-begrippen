@@ -14,7 +14,7 @@ const finalScoreText = document.getElementById("finalScoreText");
 const finalStars = document.getElementById("finalStars");
 const restartButton = document.getElementById("restartButton");
 const retryWrongButton = document.getElementById("retryWrongButton");
-
+const modeSelect = document.getElementById("modeSelect");
 
 const scoreCorrectEl = document.getElementById("scoreCorrect");
 const scoreTotalEl = document.getElementById("scoreTotal");
