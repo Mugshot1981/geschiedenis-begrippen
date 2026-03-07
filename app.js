@@ -39,7 +39,7 @@ let scoreTotal = 0;
 
 // Fouten-trainer (alleen huidige sessie, geen opslag)
 let wrongItems = [];
-]
+
 // quizmodi:
 // "term-to-answer" = begrip -> kies beschrijving
 // "answer-to-term" = beschrijving -> kies begrip
