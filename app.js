@@ -289,10 +289,18 @@ startButton.addEventListener("click", () => {
     return;
   }
 
-    currentChapterId = selectedChapterId;
+  currentChapterId = selectedChapterId;
   quizMode = modeSelect.value;
   currentChapterItems = getItemsForChapter(currentChapterId);
 
+  const selectedChapter = chapters.find((chapter) => chapter.id === currentChapterId);
+  quizSessionTitle.textContent = selectedChapter ? selectedChapter.title : "";
+
+  if (quizMode === "term-to-answer") {
+    quizSessionMode.textContent = "Begrip → beschrijving";
+  } else {
+    quizSessionMode.textContent = "Beschrijving → begrip";
+  }
   if (!currentChapterItems || currentChapterItems.length < 4) {
     alert("Dit hoofdstuk heeft minimaal 4 begrippen nodig.");
     return;
