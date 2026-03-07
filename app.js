@@ -354,7 +354,22 @@ if (restartButton) {
   });
 }
 
+if (stopButton) {
+  stopButton.addEventListener("click", () => {
+    document.body.classList.remove("quiz-active");
 
+    quizArea.classList.add("hidden");
+    endScreen.classList.add("hidden");
+
+    answersContainer.innerHTML = "";
+    feedback.textContent = "";
+    feedback.className = "feedback";
+    feedback.style.display = "none";
+
+    const backdrop = document.getElementById("feedbackBackdrop");
+    if (backdrop) backdrop.remove();
+  });
+}
 // ===== INIT =====
 
 loadChapters();
