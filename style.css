@@ -330,3 +330,38 @@ body.quiz-active .intro,
 body.quiz-active .controls {
   display: none;
 }
+
+
+////////////////////
+body.quiz-active h1,
+body.quiz-active .intro,
+body.quiz-active .controls {
+  display: none;
+}
+
+.quiz-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.quiz-session-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quiz-session-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.quiz-session-mode {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+
