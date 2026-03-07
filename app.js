@@ -8,6 +8,8 @@ const answersContainer = document.getElementById("answers");
 const feedback = document.getElementById("feedback");
 const nextButton = document.getElementById("nextButton");
 const stopButton = document.getElementById("stopButton");
+const quizSessionTitle = document.getElementById("quizSessionTitle");
+const quizSessionMode = document.getElementById("quizSessionMode");
 
 const endScreen = document.getElementById("endScreen");
 const wrongCountText = document.getElementById("wrongCountText");
