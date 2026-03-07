@@ -113,9 +113,9 @@ function showEndScreen() {
   endScreen.classList.remove("hidden");
 }
 
-function getItemsForChapter(chapterId) {
+function getItemsForChapters(chapterIds) {
   return items.filter((item) => {
-    return item.chapterId === chapterId && item.type === "begrip";
+    return chapterIds.includes(item.chapterId) && item.type === "begrip";
   });
 }
 
