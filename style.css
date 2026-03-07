@@ -155,9 +155,14 @@ letter-spacing:3px;
   transform: translate(-50%, -50%) scale(1);
 }
 
-.feedback.good,
+.feedback.good {
+  background: #ffffff;
+  border-top: 4px solid #22c55e;
+}
+
 .feedback.bad {
   background: #ffffff;
+  border-top: 4px solid #ef4444;
 }
 
 .feedback-title {
