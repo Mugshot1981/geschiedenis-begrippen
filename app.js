@@ -123,7 +123,7 @@ function getItemsForChapters(chapterIds) {
 // ===== HOOFDSTUKKEN LADEN =====
 
 function loadChapters() {
-  chapterSelect.innerHTML = '<option value="">-- Kies een hoofdstuk --</option>';
+  chapterSelect.innerHTML = "";
 
   chapters.forEach((chapter) => {
     const option = document.createElement("option");
