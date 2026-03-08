@@ -102,22 +102,22 @@ function getStarsText() {
 
 function updateScoreDisplay() {
 
-  scoreCorrectEl.textContent = scoreCorrect;
-  scoreTotalEl.textContent = scoreTotal;
+  if (scoreCorrectEl) scoreCorrectEl.textContent = scoreCorrect;
+  if (scoreTotalEl) scoreTotalEl.textContent = scoreTotal;
 
   const totalQuestions = currentChapterItems.length || 1;
 
   // sterren progress
   const starProgress = scoreCorrect / totalQuestions;
-  starsFill.style.width = `${starProgress * 100}%`;
+  if (starsFill) starsFill.style.width = `${starProgress * 100}%`;
 
   // vraagnummer
-  questionNumberEl.textContent = scoreTotal;
-  questionTotalEl.textContent = totalQuestions;
+  if (questionNumberEl) questionNumberEl.textContent = scoreTotal;
+  if (questionTotalEl) questionTotalEl.textContent = totalQuestions;
 
   // progressbar
   const percent = scoreTotal / totalQuestions;
-  progressFill.style.width = `${percent * 100}%`;
+  if (progressFill) progressFill.style.width = `${percent * 100}%`;
 
 }
 
