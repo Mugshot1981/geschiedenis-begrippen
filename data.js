@@ -1654,7 +1654,7 @@ const historyYears = [
   chapterId: "his-h3",
   year: "1939",
   event: "Niet-aanvalsverdrag tussen Duitsland en de Sovjet-Unie"
-}
+},
 // Hoofdstuk 4 – Tweede Wereldoorlog
 
 {
@@ -1764,7 +1764,7 @@ const historyYears = [
   chapterId: "his-h4",
   year: "1949",
   event: "Soevereiniteitsoverdracht Indonesië"
-}
+},
 // Hoofdstuk 5 – Koude Oorlog
 
 {
