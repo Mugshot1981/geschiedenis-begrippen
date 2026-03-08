@@ -260,6 +260,16 @@ else if (quizMode === "years") {
     .map((item) => item.answer);
 
 }
+  else if (quizMode === "event-years") {
+
+  questionText = correctItem.answer;     // gebeurtenis
+  correctOptionText = correctItem.prompt; // jaartal
+
+  wrongOptionPool = currentChapterItems
+    .filter((item) => item.id !== correctItem.id)
+    .map((item) => item.prompt);
+
+}
   const uniqueWrongOptions = [...new Set(wrongOptionPool)];
   const shuffledWrongOptions = shuffleArray(uniqueWrongOptions).slice(0, 3);
 
