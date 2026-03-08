@@ -100,19 +100,24 @@ function getStarsText() {
 }
 
 function updateScoreDisplay() {
+
   scoreCorrectEl.textContent = scoreCorrect;
   scoreTotalEl.textContent = scoreTotal;
- const totalQuestions = currentChapterItems.length || 1;
-const progress = scoreCorrect / totalQuestions;
 
-starsFill.style.width = `${progress * 100}%`;
+  const totalQuestions = currentChapterItems.length || 1;
 
-  const totalQuestions = currentChapterItems.length || 0;
+  // sterren progress
+  const starProgress = scoreCorrect / totalQuestions;
+  starsFill.style.width = `${starProgress * 100}%`;
+
+  // vraagnummer
   questionNumberEl.textContent = scoreTotal;
   questionTotalEl.textContent = totalQuestions;
 
-  const percent = totalQuestions > 0 ? (scoreTotal / totalQuestions) * 100 : 0;
-  progressFill.style.width = `${percent}%`;
+  // progressbar
+  const percent = scoreTotal / totalQuestions;
+  progressFill.style.width = `${percent * 100}%`;
+
 }
 
 function showEndScreen() {
