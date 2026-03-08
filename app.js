@@ -102,7 +102,10 @@ function getStarsText() {
 function updateScoreDisplay() {
   scoreCorrectEl.textContent = scoreCorrect;
   scoreTotalEl.textContent = scoreTotal;
-  scoreStarsEl.textContent = getStarsText();
+ const totalQuestions = currentChapterItems.length || 1;
+const progress = scoreCorrect / totalQuestions;
+
+starsFill.style.width = `${progress * 100}%`;
 
   const totalQuestions = currentChapterItems.length || 0;
   questionNumberEl.textContent = scoreTotal;
