@@ -421,3 +421,23 @@ body.quiz-active .controls {
 .chapter-checkbox-item input {
   margin: 0;
 }
+.stars {
+  position: relative;
+  font-size: 32px;
+  letter-spacing: 4px;
+  width: max-content;
+}
+
+.stars-base {
+  color: #ddd;
+}
+
+.stars-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: black;
+  width: 0%;
+}
