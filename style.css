@@ -54,7 +54,10 @@ h1 {
 }
 
 .form-row-bottom {
-  justify-content: flex-end;
+  display:grid;
+  grid-template-columns: 200px 320px auto;
+  align-items:center;
+  gap:20px;
 }
 
 .mode-wrap {
@@ -415,6 +418,13 @@ body.quiz-active .controls {
 
 .chapter-checkbox-item:hover {
   background: #f3f4f6;
+}
+.chapter-dropdown {
+  width:320px;
+}
+
+#modeSelect{
+  width:320px;
 }
 
 .chapter-checkbox-item input {
