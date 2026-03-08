@@ -143,8 +143,8 @@ function showEndScreen() {
 
 function getItemsForChapters(chapterIds) {
 
-  // JAARTALLEN QUIZ
-  if (quizMode === "years") {
+  // JAARTALLEN QUIZES
+  if (quizMode === "years" || quizMode === "event-years") {
 
     return historyYears
       .filter(item => chapterIds.includes(item.chapterId))
