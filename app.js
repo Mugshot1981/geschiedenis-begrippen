@@ -1,9 +1,7 @@
 // ===== ELEMENTEN =====
 
 const chapterSelect = document.getElementById("chapterSelect");
-const chapterDropdownButton = document.getElementById("chapterDropdownButton");
-const chapterDropdownPanel = document.getElementById("chapterDropdownPanel");
-const chapterCheckboxList = document.getElementById("chapterCheckboxList");
+const chapterTileGrid = document.getElementById("chapterTileGrid");
 const startButton = document.getElementById("startButton");
 const quizArea = document.getElementById("quizArea");
 const termDisplay = document.getElementById("termDisplay");
