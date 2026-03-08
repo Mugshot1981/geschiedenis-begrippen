@@ -222,22 +222,36 @@ function buildQuestion() {
   let correctOptionText = "";
   let wrongOptionPool = [];
 
-  if (quizMode === "term-to-answer") {
-    questionText = correctItem.prompt;
-    correctOptionText = correctItem.answer;
+ if (quizMode === "term-to-answer") {
 
-    wrongOptionPool = currentChapterItems
-      .filter((item) => item.id !== correctItem.id)
-      .map((item) => item.answer);
-  } else if (quizMode === "answer-to-term") {
-    questionText = correctItem.answer;
-    correctOptionText = correctItem.prompt;
+  questionText = correctItem.prompt;
+  correctOptionText = correctItem.answer;
 
-    wrongOptionPool = currentChapterItems
-      .filter((item) => item.id !== correctItem.id)
-      .map((item) => item.prompt);
-  }
+  wrongOptionPool = currentChapterItems
+    .filter((item) => item.id !== correctItem.id)
+    .map((item) => item.answer);
 
+}
+else if (quizMode === "answer-to-term") {
+
+  questionText = correctItem.answer;
+  correctOptionText = correctItem.prompt;
+
+  wrongOptionPool = currentChapterItems
+    .filter((item) => item.id !== correctItem.id)
+    .map((item) => item.prompt);
+
+}
+else if (quizMode === "years") {
+
+  questionText = correctItem.prompt;     // jaartal
+  correctOptionText = correctItem.answer; // gebeurtenis
+
+  wrongOptionPool = currentChapterItems
+    .filter((item) => item.id !== correctItem.id)
+    .map((item) => item.answer);
+
+}
   const uniqueWrongOptions = [...new Set(wrongOptionPool)];
   const shuffledWrongOptions = shuffleArray(uniqueWrongOptions).slice(0, 3);
 
