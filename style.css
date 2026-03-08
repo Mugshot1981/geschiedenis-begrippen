@@ -364,51 +364,40 @@ body.quiz-active .controls {
   color: #6b7280;
 }
 
-.chapter-dropdown {
-  position: relative;
+.chapter-row {
+  align-items: start;
+}
+
+.chapter-tiles-wrap {
   width: 320px;
 }
 
-.chapter-dropdown-button {
-  width: 100%;
-  height: 42px;
-  text-align: left;
-  padding: 8px 12px;
-  font-size: 16px;
-  border: 1px solid #888;
-  border-radius: 6px;
-  background: #fff;
-  cursor: pointer;
-}
-
-.chapter-dropdown-panel {
-  position: absolute;
-  top: calc(100% + 6px);
-  left: 0;
-  width: 100%;
-  max-height: 220px;
-  overflow-y: auto;
-  background: #fff;
-  border: 1px solid #cfd6e0;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  padding: 8px;
-  z-index: 200;
-}
-
-.chapter-checkbox-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.chapter-checkbox-item {
-  display: flex;
-  align-items: center;
+.chapter-tile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
-  padding: 8px 10px;
-  border-radius: 6px;
+}
+
+.chapter-tile {
+  min-height: 64px;
+  padding: 12px 14px;
+  border: 1px solid #cfd6e0;
+  border-radius: 10px;
+  background: #ffffff;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.25;
   cursor: pointer;
+}
+
+.chapter-tile:hover {
+  background: #f8fafc;
+}
+
+.chapter-tile.selected {
+  border-color: #4f46e5;
+  background: #eef2ff;
+  box-shadow: inset 0 0 0 1px #4f46e5;
 }
 
 .chapter-checkbox-item:hover {
