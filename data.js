@@ -1514,7 +1514,7 @@ const items = [
 // GESCHIEDENIS JAARTALLEN
 // =========================
 
-export const historyYears = [
+const historyYears = [
 
   // Hoofdstuk 1
   {
