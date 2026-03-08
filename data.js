@@ -1845,5 +1845,24 @@ const historyYears = [
   year: "2002",
   event: "Invoering van de euro"
 }
+  // =========================
+// COURSES
+// =========================
+
+const historyMavo4Course = {
+  id: "geschiedenis-mavo-4",
+  subject: "geschiedenis",
+  level: "mavo",
+  grade: "4",
+  title: "Geschiedenis 4 mavo",
+
+  chapters: chapters,
+  items: items,
+  years: historyYears
+};
+
+const courseCatalog = [
+  historyMavo4Course
 ];
+
 
