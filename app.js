@@ -260,14 +260,14 @@ else if (quizMode === "years") {
     .map((item) => item.answer);
 
 }
-  else if (quizMode === "event-years") {
+else if (quizMode === "event-years") {
 
-  questionText = correctItem.answer;     // gebeurtenis
+  questionText = correctItem.answer;      // gebeurtenis
   correctOptionText = correctItem.prompt; // jaartal
 
-  wrongOptionPool = currentChapterItems
-    .filter((item) => item.id !== correctItem.id)
-    .map((item) => item.prompt);
+  wrongOptionPool = [...new Set(
+    historyYears.map((item) => item.year)
+  )].filter((year) => year !== correctOptionText);
 
 }
   const uniqueWrongOptions = [...new Set(wrongOptionPool)];
