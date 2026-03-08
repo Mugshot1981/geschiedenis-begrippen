@@ -1553,6 +1553,297 @@ const historyYears = [
     year: "1983",
     event: "Sociale grondrechten in de grondwet"
   }
+  
+// Hoofdstuk 2 – Eerste Wereldoorlog
 
+{
+  id: "h2-1914",
+  chapterId: "his-h2",
+  year: "1914",
+  event: "Uitbreken van de Eerste Wereldoorlog"
+},
+{
+  id: "h2-1917",
+  chapterId: "his-h2",
+  year: "1917",
+  event: "Russische Revolutie"
+},
+{
+  id: "h2-1917-us",
+  chapterId: "his-h2",
+  year: "1917",
+  event: "De VS sluiten zich aan bij de geallieerden"
+},
+{
+  id: "h2-1918-troelstra",
+  chapterId: "his-h2",
+  year: "1918",
+  event: "Revolutiepoging van Troelstra"
+},
+{
+  id: "h2-1918-wapenstilstand",
+  chapterId: "his-h2",
+  year: "1918",
+  event: "Wapenstilstand in de Eerste Wereldoorlog"
+},
+
+// Hoofdstuk 3 – Interbellum Duitsland
+
+{
+  id: "h3-1919",
+  chapterId: "his-h3",
+  year: "1919",
+  event: "Verdrag van Versailles"
+},
+{
+  id: "h3-1923-ruhr",
+  chapterId: "his-h3",
+  year: "1923",
+  event: "Bezetting van het Ruhrgebied"
+},
+{
+  id: "h3-1923-inflatie",
+  chapterId: "his-h3",
+  year: "1923",
+  event: "Hoge inflatie in Duitsland"
+},
+{
+  id: "h3-1923-putsch",
+  chapterId: "his-h3",
+  year: "1923",
+  event: "Mislukte staatsgreep van Hitler"
+},
+{
+  id: "h3-1924",
+  chapterId: "his-h3",
+  year: "1924",
+  event: "Dawesplan"
+},
+{
+  id: "h3-1926",
+  chapterId: "his-h3",
+  year: "1926",
+  event: "Duitsland lid van de Volkenbond"
+},
+{
+  id: "h3-1929",
+  chapterId: "his-h3",
+  year: "1929",
+  event: "Beurskrach, begin wereldwijde economische crisis"
+},
+{
+  id: "h3-1933",
+  chapterId: "his-h3",
+  year: "1933",
+  event: "Machtsovername van Hitler"
+},
+{
+  id: "h3-1938",
+  chapterId: "his-h3",
+  year: "1938",
+  event: "Anschluss"
+},
+{
+  id: "h3-1938-munchen",
+  chapterId: "his-h3",
+  year: "1938",
+  event: "Conferentie van München"
+},
+{
+  id: "h3-1939-pact",
+  chapterId: "his-h3",
+  year: "1939",
+  event: "Niet-aanvalsverdrag tussen Duitsland en de Sovjet-Unie"
+}
+// Hoofdstuk 4 – Tweede Wereldoorlog
+
+{
+  id: "h4-1939-war",
+  chapterId: "his-h4",
+  year: "1939",
+  event: "Duitsland valt Polen binnen: begin Tweede Wereldoorlog"
+},
+{
+  id: "h4-1940-nl",
+  chapterId: "his-h4",
+  year: "10 mei 1940",
+  event: "Duitsland valt Nederland binnen"
+},
+{
+  id: "h4-1941-februaristaking",
+  chapterId: "his-h4",
+  year: "1941",
+  event: "Februaristaking"
+},
+{
+  id: "h4-1941-pearl",
+  chapterId: "his-h4",
+  year: "1941",
+  event: "Aanval op Pearl Harbor"
+},
+{
+  id: "h4-1941-barbarossa",
+  chapterId: "his-h4",
+  year: "1941",
+  event: "Operatie Barbarossa: Duitsland valt de Sovjet-Unie binnen"
+},
+{
+  id: "h4-1941-usa-ussr",
+  chapterId: "his-h4",
+  year: "1941",
+  event: "VS en SU sluiten zich aan bij de geallieerden"
+},
+{
+  id: "h4-1942-indie",
+  chapterId: "his-h4",
+  year: "1942",
+  event: "Japanse bezetting van Nederlands-Indië"
+},
+{
+  id: "h4-1942-stalingrad",
+  chapterId: "his-h4",
+  year: "1942-1943",
+  event: "Slag om Stalingrad"
+},
+{
+  id: "h4-1944-dday",
+  chapterId: "his-h4",
+  year: "6 juni 1944",
+  event: "D-Day"
+},
+{
+  id: "h4-1944-spoorweg",
+  chapterId: "his-h4",
+  year: "1944",
+  event: "Spoorwegstaking"
+},
+{
+  id: "h4-1944-marketgarden",
+  chapterId: "his-h4",
+  year: "1944",
+  event: "Operatie Market Garden en Slag om Arnhem"
+},
+{
+  id: "h4-1945-nlvrij",
+  chapterId: "his-h4",
+  year: "5 mei 1945",
+  event: "Heel Nederland is bevrijd"
+},
+{
+  id: "h4-1945-duitsland",
+  chapterId: "his-h4",
+  year: "mei 1945",
+  event: "Duitsland geeft zich over"
+},
+{
+  id: "h4-1945-atoom",
+  chapterId: "his-h4",
+  year: "augustus 1945",
+  event: "Atoomaanval op Japan, Japan geeft zich over"
+},
+{
+  id: "h4-1945-indie",
+  chapterId: "his-h4",
+  year: "15 augustus 1945",
+  event: "Indonesië is bevrijd van Japan"
+},
+{
+  id: "h4-1945-soekarno",
+  chapterId: "his-h4",
+  year: "17 augustus 1945",
+  event: "Soekarno roept de onafhankelijke Republiek Indonesië uit"
+},
+{
+  id: "h4-1947-politioneel",
+  chapterId: "his-h4",
+  year: "1947 en 1948",
+  event: "Politionele acties"
+},
+{
+  id: "h4-1949-indie",
+  chapterId: "his-h4",
+  year: "1949",
+  event: "Soevereiniteitsoverdracht Indonesië"
+}
+// Hoofdstuk 5 – Koude Oorlog
+
+{
+  id: "h5-1945-endww2",
+  chapterId: "his-h5",
+  year: "1945",
+  event: "Einde van de Tweede Wereldoorlog"
+},
+{
+  id: "h5-1945-coldwar",
+  chapterId: "his-h5",
+  year: "1945",
+  event: "Begin van de Koude Oorlog"
+},
+{
+  id: "h5-1956-hungary",
+  chapterId: "his-h5",
+  year: "1956",
+  event: "Hongaarse Opstand"
+},
+{
+  id: "h5-1961-berlinwall",
+  chapterId: "his-h5",
+  year: "1961",
+  event: "Bouw van de Berlijnse Muur"
+},
+{
+  id: "h5-1962-cuba",
+  chapterId: "his-h5",
+  year: "1962",
+  event: "Cuba-crisis"
+},
+{
+  id: "h5-1968-prague",
+  chapterId: "his-h5",
+  year: "1968",
+  event: "Praagse Lente"
+},
+{
+  id: "h5-1989-wall",
+  chapterId: "his-h5",
+  year: "1989",
+  event: "Val van de Berlijnse Muur"
+},
+{
+  id: "h5-1989-coldwar",
+  chapterId: "his-h5",
+  year: "1989",
+  event: "Einde van de Koude Oorlog"
+},
+{
+  id: "h5-1990-ussr",
+  chapterId: "his-h5",
+  year: "1990-1991",
+  event: "Sovjet-Unie valt uit elkaar"
+},
+{
+  id: "h5-1991-ussrend",
+  chapterId: "his-h5",
+  year: "1991",
+  event: "Sovjet-Unie wordt opgeheven"
+},
+{
+  id: "h5-1993-eu",
+  chapterId: "his-h5",
+  year: "1993",
+  event: "Oprichting van de EU"
+},
+{
+  id: "h5-2001-911",
+  chapterId: "his-h5",
+  year: "11 september 2001",
+  event: "Aanslagen in de Verenigde Staten"
+},
+{
+  id: "h5-2002-euro",
+  chapterId: "his-h5",
+  year: "2002",
+  event: "Invoering van de euro"
+}
 ];
 
