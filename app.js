@@ -22,7 +22,7 @@ const modeSelect = document.getElementById("modeSelect");
 
 const scoreCorrectEl = document.getElementById("scoreCorrect");
 const scoreTotalEl = document.getElementById("scoreTotal");
-const scoreStarsEl = document.getElementById("scoreStars");
+const starsFill = document.getElementById("starsFill");
 
 const questionNumberEl = document.getElementById("questionNumber");
 const questionTotalEl = document.getElementById("questionTotal");
