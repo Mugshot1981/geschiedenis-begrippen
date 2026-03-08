@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -6,99 +7,189 @@
   <title>Geschiedenis Begrippen</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <main class="page">
-    <section class="card">
-      <h1>Geschiedenis Begrippen 4 mavo</h1>
-      <p class="intro">
-        Oefen per hoofdstuk de belangrijkste begrippen met multiple choice.
-      </p>
-      
+<main class="page">
+
+<section class="card">
+
+<h1>Geschiedenis Begrippen 4 mavo</h1>
+
+<p class="intro">
+Oefen per hoofdstuk de belangrijkste begrippen met multiple choice.
+</p>
+
+
 <div class="controls">
+
+<!-- hoofdstukken -->
 <div class="form-row chapter-row">
-  <label for="chapterSelect">Kies hoofdstukken:</label>
 
-  <div class="chapter-tiles-wrap">
-    <div id="chapterTileGrid" class="chapter-tile-grid"></div>
-    <select id="chapterSelect" multiple size="5" class="hidden"></select>
-  </div>
+<label for="chapterSelect">Kies hoofdstukken:</label>
+
+<div class="chapter-tiles-wrap">
+
+<div id="chapterTileGrid" class="chapter-tile-grid"></div>
+
+<select id="chapterSelect" multiple size="5" class="hidden"></select>
+
 </div>
 
+</div>
+
+
+<!-- oefenmethode -->
 <div class="form-row form-row-bottom">
-  <label for="modeSelect">Oefenmethode:</label>
-  <select id="modeSelect">
-    <option value="term-to-answer">Begrip → beschrijving</option>
-    <option value="answer-to-term">Beschrijving → begrip</option>
-  </select>
+
+<label for="modeSelect">Oefenmethode:</label>
+
+<select id="modeSelect">
+
+<option value="term-to-answer">
+Begrip → beschrijving
+</option>
+
+<option value="answer-to-term">
+Beschrijving → begrip
+</option>
+
+<option value="years">
+Jaartallen → gebeurtenis
+</option>
+
+</select>
+
 </div>
 
+
+<!-- start -->
 <div class="form-row form-row-button">
-  <div></div>
+
+<div></div>
+
+<button id="startButton">
+Start oefenen
+</button>
+
+</div>
+
+</div>
 
 
-<button id="startButton">Start oefenen</button>
-</div>
-</div>
 
 <div id="quizArea" class="quiz-area hidden">
 
+
 <div class="scoreboard">
- <div class="quiz-topbar">
-  <div class="quiz-session-info">
-    <div id="quizSessionTitle" class="quiz-session-title"></div>
-    <div id="quizSessionMode" class="quiz-session-mode"></div>
-  </div>
 
-  <button id="stopButton" type="button">Stoppen</button>
+<div class="quiz-topbar">
+
+<div class="quiz-session-info">
+
+<div id="quizSessionTitle" class="quiz-session-title"></div>
+
+<div id="quizSessionMode" class="quiz-session-mode"></div>
+
 </div>
 
-  <div class="scoreline">
-    Score: <span id="scoreCorrect">0</span> /
-    <span id="scoreTotal">0</span>
-  </div>
+<button id="stopButton" type="button">
+Stoppen
+</button>
 
-  <div class="questionline">
-    Vraag <span id="questionNumber">0</span> /
-    <span id="questionTotal">0</span>
-  </div>
-
-  <div class="progressbar">
-    <div id="progressFill"></div>
-  </div>
-
-  <div class="stars">
-    <span id="scoreStars">☆☆☆☆☆</span>
-  </div>
 </div>
-        
 
-        <div class="question-box">
-          <div class="question-label">Begrip</div>
-          <h2 id="termDisplay">Begrip komt hier</h2>
-        </div>
 
-        <div id="answers" class="answers"></div>
+<div class="scoreline">
+Score:
+<span id="scoreCorrect">0</span> /
+<span id="scoreTotal">0</span>
+</div>
 
-        <div id="feedback" class="feedback"></div>
 
-        <div class="quiz-actions">
-          <button id="nextButton" class="hidden">Volgende vraag</button>
-        </div>
+<div class="questionline">
+Vraag
+<span id="questionNumber">0</span> /
+<span id="questionTotal">0</span>
+</div>
+
+
+<div class="progressbar">
+<div id="progressFill"></div>
+</div>
+
+
+<div class="stars">
+<span id="scoreStars">☆☆☆☆☆</span>
+</div>
+
+</div>
+
+
+
+<div class="question-box">
+
+<div class="question-label">
+Begrip
+</div>
+
+<h2 id="termDisplay">
+Begrip komt hier
+</h2>
+
+</div>
+
+
+<div id="answers" class="answers"></div>
+
+
+<div id="feedback" class="feedback"></div>
+
+
+<div class="quiz-actions">
+
+<button id="nextButton" class="hidden">
+Volgende vraag
+</button>
+
+</div>
+
+
 
 <div id="endScreen" class="end-screen hidden">
-  <h3>Hoofdstuk afgerond</h3>
-  <p>Eindscore: <span id="finalScoreText">0 / 0</span></p>
-  <p id="wrongCountText"></p>
-  <div id="finalStars" class="score-stars">☆☆☆☆☆</div>
-  <button id="restartButton">Opnieuw oefenen</button>
-  <button id="retryWrongButton" class="hidden">Oefen fouten opnieuw</button>
+
+<h3>Hoofdstuk afgerond</h3>
+
+<p>
+Eindscore:
+<span id="finalScoreText">0 / 0</span>
+</p>
+
+<p id="wrongCountText"></p>
+
+<div id="finalStars" class="score-stars">
+☆☆☆☆☆
 </div>
 
-      </div>
-    </section>
-  </main>
+<button id="restartButton">
+Opnieuw oefenen
+</button>
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+<button id="retryWrongButton" class="hidden">
+Oefen fouten opnieuw
+</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
