@@ -142,35 +142,19 @@ function getItemsForChapters(chapterIds) {
 
 // ===== HOOFDSTUKKEN LADEN =====
 
-function updateChapterDropdownButtonText() {
-  const selectedLabels = Array.from(chapterSelect.selectedOptions).map(
-    (option) => option.textContent
+function syncChapterTilesFromSelect() {
+  const selectedIds = Array.from(chapterSelect.selectedOptions).map(
+    (option) => option.value
   );
 
-  if (selectedLabels.length === 0) {
-    chapterDropdownButton.textContent = "Kies hoofdstukken";
-  } else if (selectedLabels.length === 1) {
-    chapterDropdownButton.textContent = selectedLabels[0];
-  } else {
-    chapterDropdownButton.textContent = `${selectedLabels.length} hoofdstukken gekozen`;
-  }
-}
-
-function syncChapterSelectFromCheckboxes() {
-  const checkedIds = Array.from(
-    chapterCheckboxList.querySelectorAll('input[type="checkbox"]:checked')
-  ).map((checkbox) => checkbox.value);
-
-  Array.from(chapterSelect.options).forEach((option) => {
-    option.selected = checkedIds.includes(option.value);
+  Array.from(chapterTileGrid.children).forEach((tile) => {
+    tile.classList.toggle("selected", selectedIds.includes(tile.dataset.chapterId));
   });
-
-  updateChapterDropdownButtonText();
 }
 
 function loadChapters() {
   chapterSelect.innerHTML = "";
-  chapterCheckboxList.innerHTML = "";
+  chapterTileGrid.innerHTML = "";
 
   chapters.forEach((chapter) => {
     const option = document.createElement("option");
@@ -178,29 +162,28 @@ function loadChapters() {
     option.textContent = chapter.title;
     chapterSelect.appendChild(option);
 
-    const label = document.createElement("label");
-    label.className = "chapter-checkbox-item";
+    const tile = document.createElement("button");
+    tile.type = "button";
+    tile.className = "chapter-tile";
+    tile.dataset.chapterId = chapter.id;
+    tile.textContent = getTileTitle(chapter.title);
 
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.value = chapter.id;
+    tile.addEventListener("click", () => {
+      const optionToToggle = Array.from(chapterSelect.options).find(
+        (option) => option.value === chapter.id
+      );
 
-    checkbox.addEventListener("change", () => {
-      syncChapterSelectFromCheckboxes();
+      if (!optionToToggle) return;
+
+      optionToToggle.selected = !optionToToggle.selected;
+      syncChapterTilesFromSelect();
     });
 
-    const text = document.createElement("span");
-    text.textContent = chapter.title;
-
-    label.appendChild(checkbox);
-    label.appendChild(text);
-    chapterCheckboxList.appendChild(label);
+    chapterTileGrid.appendChild(tile);
   });
 
-  updateChapterDropdownButtonText();
+  syncChapterTilesFromSelect();
 }
-
-
 // ===== VRAAG OPBOUWEN =====
 
 function buildQuestion() {
