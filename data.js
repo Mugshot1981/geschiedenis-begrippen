@@ -1844,7 +1844,7 @@ const historyYears = [
   chapterId: "his-h5",
   year: "2002",
   event: "Invoering van de euro"
-}
+},
   // =========================
 // COURSES
 // =========================
