@@ -50,7 +50,7 @@ h1 {
 
 .form-row-bottom {
   display: grid;
-  grid-template-columns: 220px 320px 180px;
+  grid-template-columns: 220px 320px 160px;
   align-items: center;
   gap: 20px;
 }
