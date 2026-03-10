@@ -595,6 +595,7 @@ const items = [
   prompt: "Volkenbond",
   answer: "Een internationale organisatie die een nieuwe oorlog moest voorkomen."
 },
+  
   {
   id: "his-h3-001",
   subjectId: "geschiedenis",
@@ -905,7 +906,7 @@ const items = [
   chapterId: "his-h3",
   type: "begrip",
   prompt: "stalinisme",
-  answer: "Stalins manier van besturen."
+  answer: "Een totalitaire manier van besturen waarin tegenstanders uit de weg werden geruimd, en door middel van propagande en persoonsverheerlijking Stalin als groet leider werd neergezet."
 },
 {
   id: "his-h3-040",
@@ -914,6 +915,86 @@ const items = [
   type: "begrip",
   prompt: "niet-aanvalsverdrag",
   answer: "Verdrag uit 1939 waarin Duitsland en de Sovjet-Unie beloofden elkaar niet aan te vallen en elkaars tegenstanders niet te hulp te komen. In een geheim gedeelte van dit verdrag stond dat Polen tussen beide landen werd verdeeld."
+},
+  {
+  id: "his-h3-041",
+  subjectId: "geschiedenis",
+  chapterId: "his-h3",
+  type: "begrip",
+  prompt: "herbewapening",
+  answer: "Het opnieuw opbouwen en uitbreiden van het leger en de bewapening van een land."
+},
+
+{
+  id: "his-h3-042",
+  subjectId: "geschiedenis",
+  chapterId: "his-h3",
+  type: "begrip",
+  prompt: "herstelbetaling",
+  answer: "Betaling door een land aan een ander land voor schade die tijdens een oorlog is veroorzaakt."
+},
+
+{
+  id: "his-h3-043",
+  subjectId: "geschiedenis",
+  chapterId: "his-h3",
+  type: "begrip",
+  prompt: "Hitlerjugend",
+  answer: "Nationaalsocialistische jeugdorganisatie in nazi-Duitsland voor jongens en meisjes."
+},
+
+{
+  id: "his-h3-044",
+  subjectId: "geschiedenis",
+  chapterId: "his-h3",
+  type: "begrip",
+  prompt: "Kristallnacht",
+  answer: "De nacht van 9 op 10 november 1938 waarin in Duitsland Joodse winkels, synagogen en huizen werden vernield."
+},
+
+{
+  id: "his-h3-045",
+  subjectId: "geschiedenis",
+  chapterId: "his-h3",
+  type: "begrip",
+  prompt: "rassenwetten",
+  answer: "Antisemitische wetten in nazi-Duitsland waarin werd vastgelegd dat Joden geen volwaardige Duitse burgers waren."
+},
+
+{
+  id: "his-h3-046",
+  subjectId: "geschiedenis",
+  chapterId: "his-h3",
+  type: "begrip",
+  prompt: "Volkenbond",
+  answer: "Internationale organisatie opgericht na de Eerste Wereldoorlog om vrede te bewaren."
+},
+
+{
+  id: "his-h3-047",
+  subjectId: "geschiedenis",
+  chapterId: "his-h3",
+  type: "begrip",
+  prompt: "stempelensysteem",
+  answer: "Systeem waarbij werklozen regelmatig een stempelkaart moesten laten afstempelen om aan te tonen dat zij beschikbaar waren voor werk."
+},
+
+{
+  id: "his-h3-048",
+  subjectId: "geschiedenis",
+  chapterId: "his-h3",
+  type: "begrip",
+  prompt: "neutraliteitspolitiek",
+  answer: "Beleid waarbij een land probeert neutraal te blijven en geen partij kiest in conflicten tussen andere landen."
+},
+
+{
+  id: "his-h3-049",
+  subjectId: "geschiedenis",
+  chapterId: "his-h3",
+  type: "begrip",
+  prompt: "WA",
+  answer: "Weerbaarheidsafdeling van de NSB, een soort knokploeg van deze partij."
 },
 
   {
