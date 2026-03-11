@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KennisSprint Login</title>
+</head>
+<body>
+
+  <h1>KennisSprint</h1>
+
+  <input id="email" placeholder="email">
+  <button id="loginButton">Login</button>
+  <pre id="debugOutput"></pre>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+   <script>
+    const supabaseClient = window.supabase.createClient(
+      "https://leceithebntgxauivrdf.supabase.co",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlY2VpdGhlYm50Z3hhdWl2cmRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjkzNTgsImV4cCI6MjA4ODc0NTM1OH0.R3n8Gj6EpZ-7SnbcvfzoCdKgmkAWlFetEyUBsNjg2ns"
+    );
+
+    async function login() {
+      const email = document.getElementById("email").value.trim();
+      const debugOutput = document.getElementById("debugOutput");
+
+      debugOutput.textContent = "Bezig met inloggen...";
+
+      const { data, error } = await supabaseClient.auth.signInWithOtp({
+        email: email,
+        options: {
+          emailRedirectTo: "https://mugshot1981.github.io/kennissprint/course.html"
+        }
+      });
+
+      console.log("signInWithOtp result:", { data, error });
+
+      if (error) {
+        debugOutput.textContent = "FOUT: " + error.message;
+        alert(error.message);
+      } else {
+        debugOutput.textContent = "OK: verzoek verstuurd. Controleer inbox én spam.";
+        alert("Check je mail voor de login link");
+      }
+    }
+
+    document.getElementById("loginButton").addEventListener("click", login);
+  </script>
+
+</body>
+</html>

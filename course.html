@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KennisSprint</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+    <div class="card">
+
+      <a href="index.html" class="back-link">← Andere cursus kiezen</a>
+
+      <h1 id="pageHeading">Cursus</h1>
+
+      <p id="pageIntro" class="intro">
+        Oefen per hoofdstuk de belangrijkste begrippen met multiple choice.
+      </p>
+
+      <div class="controls">
+
+        <div class="form-row chapter-row">
+          <label for="chapterSelect"><strong>Kies hoofdstukken:</strong></label>
+
+          <div class="chapter-tiles-wrap">
+            <select id="chapterSelect" multiple hidden></select>
+            <div id="chapterTileGrid" class="chapter-tile-grid"></div>
+          </div>
+        </div>
+
+     <div class="form-row-bottom mode-wrap">
+  <label for="modeSelect"><strong>Oefenvorm:</strong></label>
+  <select id="modeSelect"></select>
+</div>
+
+<div class="form-row-button">
+  <label></label>
+  <button id="startButton">Start oefenen</button>
+</div>
+
+      </div>
+
+      <div id="quizArea" class="hidden">
+
+        <div class="quiz-topbar">
+          <div class="quiz-session-info">
+            <div id="quizSessionTitle" class="quiz-session-title"></div>
+            <div id="quizSessionMode" class="quiz-session-mode"></div>
+          </div>
+
+          <button id="stopButton">Stoppen</button>
+        </div>
+
+        <div class="scoreboard">
+          <div>
+            Goed: <strong id="scoreCorrect">0</strong>
+            Totaal: <strong id="scoreTotal">0</strong>
+          </div>
+
+          <div>
+            Vraag <strong id="questionNumber">0</strong> /
+            <strong id="questionTotal">0</strong>
+          </div>
+
+          <div class="progressbar">
+            <div id="progressFill"></div>
+          </div>
+
+          <div class="stars">
+            <span class="stars-base">★★★★★</span>
+            <span id="starsFill" class="stars-fill">★★★★★</span>
+          </div>
+        </div>
+        
+<div class="question-box">
+  <div class="prompt-box">
+    <div id="questionLabel" class="question-label">BEGRIP</div>
+    <div id="termDisplay"></div>
+  </div>
+
+  <div id="answers" class="answers"></div>
+  <div id="feedback" class="feedback"></div>
+  <button id="nextButton" class="hidden">Volgende</button>
+</div>
+
+      </div>
+
+      <div id="endScreen" class="hidden">
+        <h2>Set afgerond</h2>
+        <p id="finalScoreText"></p>
+        <p id="finalStars"></p>
+        <p id="wrongCountText"></p>
+        <button id="restartButton">Opnieuw</button>
+        <button id="retryWrongButton">Oefen fouten opnieuw</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const SUPABASE_URL = "https://leceithebntgxauivrdf.supabase.co";
+    const SUPABASE_ANON_KEY = "PLAK_HIER_JE_ANON_KEY";
+
+    window.supabaseClient = window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY
+    );
+  </script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

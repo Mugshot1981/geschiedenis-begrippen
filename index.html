@@ -1,0 +1,185 @@
+/*
+KennisSprint dataset
+© Joas de Wit
+2026
+*/
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KennisSprint</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1 id="pageHeading">KennisSprint</h1>
+      <p id="pageIntro" class="intro">
+        Kies eerst een vak, niveau en jaar om naar de juiste cursus te gaan.
+      </p>
+
+      <div class="course-picker">
+        <div class="picker-row">
+          <label for="subjectSelect"><strong>Vak:</strong></label>
+          <select id="subjectSelect">
+            <option value="">Kies vak</option>
+          </select>
+        </div>
+
+        <div class="picker-row">
+          <label for="levelSelect"><strong>Niveau:</strong></label>
+          <select id="levelSelect">
+            <option value="">Kies niveau</option>
+          </select>
+        </div>
+
+        <div class="picker-row">
+          <label for="gradeSelect"><strong>Jaar:</strong></label>
+          <select id="gradeSelect">
+            <option value="">Kies jaar</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="landing-actions">
+        <button id="openCourseButton" type="button">Open cursus</button>
+      </div>
+
+      <p id="selectionMessage" class="intro"></p>
+    </section>
+  </main>
+
+<script type="module">
+import { courseCatalog } from "./data.js";
+    const subjectSelect = document.getElementById("subjectSelect");
+    const levelSelect = document.getElementById("levelSelect");
+    const gradeSelect = document.getElementById("gradeSelect");
+    const openCourseButton = document.getElementById("openCourseButton");
+    const selectionMessage = document.getElementById("selectionMessage");
+
+    function getUniqueValues(key, courses) {
+      return [...new Set(courses.map(course => course[key]))];
+    }
+
+    function populateSelect(selectElement, values, placeholder, selectedValue = "") {
+      selectElement.innerHTML = "";
+
+      const placeholderOption = document.createElement("option");
+      placeholderOption.value = "";
+      placeholderOption.textContent = placeholder;
+      selectElement.appendChild(placeholderOption);
+
+      values.forEach((value) => {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = value;
+
+        if (value === selectedValue) {
+          option.selected = true;
+        }
+
+        selectElement.appendChild(option);
+      });
+    }
+
+    function getCoursesBySubject(subject) {
+      return courseCatalog.filter(course => course.subject === subject);
+    }
+
+    function getCoursesBySubjectAndLevel(subject, level) {
+      return courseCatalog.filter(
+        course => course.subject === subject && course.level === level
+      );
+    }
+
+    function findCourse(subject, level, grade) {
+      return courseCatalog.find(
+        course =>
+          course.subject === subject &&
+          course.level === level &&
+          course.grade === grade
+      );
+    }
+
+    function refreshLevelSelect() {
+      const selectedSubject = subjectSelect.value;
+
+      if (!selectedSubject) {
+        populateSelect(levelSelect, [], "Kies niveau");
+        populateSelect(gradeSelect, [], "Kies jaar");
+        return;
+      }
+
+      const coursesForSubject = getCoursesBySubject(selectedSubject);
+      const availableLevels = getUniqueValues("level", coursesForSubject);
+
+      populateSelect(levelSelect, availableLevels, "Kies niveau");
+      populateSelect(gradeSelect, [], "Kies jaar");
+    }
+
+    function refreshGradeSelect() {
+      const selectedSubject = subjectSelect.value;
+      const selectedLevel = levelSelect.value;
+
+      if (!selectedSubject || !selectedLevel) {
+        populateSelect(gradeSelect, [], "Kies jaar");
+        return;
+      }
+
+      const coursesForSubjectAndLevel = getCoursesBySubjectAndLevel(
+        selectedSubject,
+        selectedLevel
+      );
+
+      const availableGrades = getUniqueValues("grade", coursesForSubjectAndLevel);
+
+      populateSelect(gradeSelect, availableGrades, "Kies jaar");
+    }
+
+    function initSelectors() {
+      const subjects = getUniqueValues("subject", courseCatalog);
+      populateSelect(subjectSelect, subjects, "Kies vak");
+      populateSelect(levelSelect, [], "Kies niveau");
+      populateSelect(gradeSelect, [], "Kies jaar");
+    }
+
+    subjectSelect.addEventListener("change", () => {
+      refreshLevelSelect();
+      selectionMessage.textContent = "";
+    });
+
+    levelSelect.addEventListener("change", () => {
+      refreshGradeSelect();
+      selectionMessage.textContent = "";
+    });
+
+    gradeSelect.addEventListener("change", () => {
+      selectionMessage.textContent = "";
+    });
+
+    openCourseButton.addEventListener("click", () => {
+      const subject = subjectSelect.value;
+      const level = levelSelect.value;
+      const grade = gradeSelect.value;
+
+      if (!subject || !level || !grade) {
+        selectionMessage.textContent = "Kies eerst vak, niveau en jaar.";
+        return;
+      }
+
+      const course = findCourse(subject, level, grade);
+
+      if (!course) {
+        selectionMessage.textContent = "Voor deze combinatie bestaat nog geen cursus.";
+        return;
+      }
+
+      window.location.href =
+        "course.html?course=" + encodeURIComponent(course.id);
+    });
+
+    initSelectors();
+  </script>
+</body>
+</html>
