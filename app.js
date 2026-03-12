@@ -121,18 +121,6 @@ function getCourseYears(course) {
 }
 
 function getModeConfig(modeId) {
-  const courseMode = activeCourse?.modes?.find((mode) => mode.id === modeId);
-
-  if (courseMode) {
-    return {
-      questionLabel: courseMode.questionLabel || "Vraag",
-      sessionModeLabel: courseMode.sessionModeLabel || courseMode.label || modeId,
-      questionField: courseMode.questionField,
-      answerField: courseMode.answerField,
-      dataset: courseMode.dataset
-    };
-  }
-
   const fallbackConfigs = {
     "term-to-answer": {
       questionLabel: "Begrip",
@@ -178,7 +166,29 @@ function getModeConfig(modeId) {
     }
   };
 
-  return fallbackConfigs[modeId] || {
+  const fallback = fallbackConfigs[modeId];
+  const courseMode = activeCourse?.modes?.find((mode) => mode.id === modeId);
+
+  if (fallback) {
+    return {
+      ...fallback,
+      questionLabel: courseMode?.questionLabel || fallback.questionLabel,
+      sessionModeLabel:
+        courseMode?.sessionModeLabel || courseMode?.label || fallback.sessionModeLabel
+    };
+  }
+
+  if (courseMode) {
+    return {
+      questionLabel: courseMode.questionLabel || "Vraag",
+      sessionModeLabel: courseMode.sessionModeLabel || courseMode.label || modeId,
+      questionField: courseMode.questionField || "prompt",
+      answerField: courseMode.answerField || "answer",
+      dataset: courseMode.dataset || "terms"
+    };
+  }
+
+  return {
     questionLabel: "Vraag",
     sessionModeLabel: modeId,
     questionField: "prompt",
