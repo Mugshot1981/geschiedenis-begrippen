@@ -93,7 +93,11 @@ h2 {
 }
 
 .chapter-tiles-wrap {
-  width: 320px;
+  width: 100%;
+  max-width: 920px;
+  max-height: 180px;
+  overflow-y: auto;
+  position: relative;
 }
 
 .chapter-tile-grid {
